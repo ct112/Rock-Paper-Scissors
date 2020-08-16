@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors Game</h1>
+        <button id = "rock"></button>
+        <button id = "paper"></button>
+        <button id = "scissors"></button>
 
-</body>
-</html>
+    <script>
+         let player = { selection: undefined,
+            }
+            let computer = {selection: function(){
+                let rockPaperScissorsDict = {1: "rock",
+                                             2: "paper",
+                                             3: "scissors"
+                }
+                let generateSelection = Math.floor((Math.random() * 3)+1);
+                return rockPaperScissorsDict[generateSelection];
+
+            }}
+    </script>
+    </body>
+    </html>

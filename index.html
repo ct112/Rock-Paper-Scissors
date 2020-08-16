@@ -11,20 +11,7 @@
         <button id = "scissors"></button>
 
     <script>
-        let buttonNodeList = document.querySelectorAll("button");
-        for (let i = 0; i < buttonNodeList.length; i++){
-            buttonNodeList[i].addEventListener('click',()=>{
-                alert('button clicked');
-            })};
-
-
-
-         let player = {choice:"",
-             selection: function(){
-
-
-             },
-            }
+        let player = {choice: ""}
         let computer = {selection: function(){
             let rockPaperScissorsDict = {1: "rock",
                                          2: "paper",
@@ -34,7 +21,16 @@
             return rockPaperScissorsDict[generateSelection];
 
         }}
-        console.log(player.choice);
+        let buttonNodeList = document.querySelectorAll("button");
+        for (let i = 0; i < buttonNodeList.length; i++){
+            buttonNodeList[i].addEventListener('click',event=>{
+                player.choice = event.target.id;
+            })};
+
+
+
+
+
     </script>
     </body>
     </html>

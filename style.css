@@ -1,0 +1,13 @@
+.rock{ background-image: url(rock.png);
+       height: 200px;
+       width: 200px;
+
+}
+.paper{ background-image: url(paper.png);
+        height: 200px;
+        width: 200px;
+}
+.scissors{ background-image: url(scissors.png);
+           height: 200px;
+           width: 200px;
+}

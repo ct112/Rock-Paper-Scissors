@@ -11,17 +11,30 @@
         <button id = "scissors"></button>
 
     <script>
-         let player = { selection: undefined,
-            }
-            let computer = {selection: function(){
-                let rockPaperScissorsDict = {1: "rock",
-                                             2: "paper",
-                                             3: "scissors"
-                }
-                let generateSelection = Math.floor((Math.random() * 3)+1);
-                return rockPaperScissorsDict[generateSelection];
+        let buttonNodeList = document.querySelectorAll("button");
+        for (let i = 0; i < buttonNodeList.length; i++){
+            buttonNodeList[i].addEventListener('click',()=>{
+                alert('button clicked');
+            })};
 
-            }}
+
+
+         let player = {choice:"",
+             selection: function(){
+
+
+             },
+            }
+        let computer = {selection: function(){
+            let rockPaperScissorsDict = {1: "rock",
+                                         2: "paper",
+                                         3: "scissors"
+            }
+            let generateSelection = Math.floor((Math.random() * 3)+1);
+            return rockPaperScissorsDict[generateSelection];
+
+        }}
+        console.log(player.choice);
     </script>
     </body>
     </html>
